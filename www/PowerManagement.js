@@ -1,5 +1,4 @@
-cordova.define("com.simplec.plugins.powermanagement.PowerManagement", function(require, exports, module) {
-               var cordovaRef = window.PhoneGap || window.Cordova || window.cordova;
+var cordovaRef = window.PhoneGap || window.Cordova || window.cordova;
 
 var PowerManagement = function() {
 };
@@ -51,4 +50,4 @@ if (cordovaRef) {
 	if (!window.plugins.powerManagement) {
 	    window.plugins.powerManagement = new PowerManagement();
 	}
-}});
+}
