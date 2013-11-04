@@ -11,21 +11,23 @@
 		</description>
 	
 		<license>MIT</license>
-		
-	<engines>
-		<engine name="cordova" version=">=2.3.0" />
-	</engines>
+
+    <engines>
+        <engine name="cordova" version="&gt;=3.0.0" />
+    </engines>
 	
 	
 	<asset src="www/PowerManagement.js" target="PowerManagement.js" />
-	
+
+    <js-module src="www/PowerManagement.js" name="PowerManagement">
+        <clobbers target="plugins.powermanagement" />
+    </js-module>
+
 	<!-- ios -->
 	<platform name="ios">
-		<!-- Cordova < 2.3 -->
-        <plugins-plist key="PowerManagement" string="PowerManagement" />
-        
+
 		<!-- Cordova >= 2.3 -->
-		<config-file target="config.xml" parent="plugins">
+		<config-file target="config.xml" parent="/*">
 			<feature name="PowerManagement">
 				<param name="ios-package" value="PowerManagement" />
 			</feature>

@@ -1,4 +1,5 @@
-var cordovaRef = window.PhoneGap || window.Cordova || window.cordova;
+cordova.define("com.simplec.plugins.powermanagement.PowerManagement", function(require, exports, module) {
+               var cordovaRef = window.PhoneGap || window.Cordova || window.cordova;
 
 var PowerManagement = function() {
 };
@@ -13,7 +14,7 @@ var PowerManagement = function() {
  *            wake-lock
  */
 PowerManagement.prototype.acquire = function(successCallback, failureCallback) {
-	cordovaRef.exec(successCallback, failureCallback, 'PowerManagement', 'acquire', []);
+               cordovaRef.exec(successCallback, failureCallback, 'PowerManagement', 'acquire', []);
 };
 
 /**
@@ -50,4 +51,4 @@ if (cordovaRef) {
 	if (!window.plugins.powerManagement) {
 	    window.plugins.powerManagement = new PowerManagement();
 	}
-}
+}});
